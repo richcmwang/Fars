@@ -2,7 +2,8 @@
 #'
 #' @param filename The name of a csv file to read in.
 #' @return a data frame tbl containing the data in the file
-#' @note if no file called filename exists, then return an error
+#' @note file has to be in the working directory.  If no file called filename exists in the working directory,
+#' then return an error
 
 fars_read <- function(filename) {
         if(!file.exists(filename))
@@ -53,6 +54,7 @@ fars_read_years <- function(years) {
 #' for each input year
 #' @note "dplyr" package is required.  If input years contains a year where no data exists,
 #' then the function will returns summary for valid years and a warning of invalid year.
+#' error and warning message are returned when the list of years contains no valid year.
 fars_summarize_years <- function(years) {
         dat_list <- fars_read_years(years)
         dplyr::bind_rows(dat_list) %>%
