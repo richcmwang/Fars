@@ -7,15 +7,17 @@
 fars_summarize_years(years)
 }
 \arguments{
-\item{years}{an integer}
+\item{years}{a vector of integers}
 }
 \value{
 a tibble showing summary of number of accidents by month
-each year
+for each input year
 }
 \description{
 Show a summary of accidents during given years
 }
 \note{
-"dplyr" package is required
+"dplyr" package is required.  If input years contains a year where no data exists,
+then the function will returns summary for valid years and a warning of invalid year.
+error and warning message are returned when the list of years contains no valid year.
 }

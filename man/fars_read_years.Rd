@@ -10,13 +10,15 @@ fars_read_years(years)
 \item{years}{A vector of integers}
 }
 \value{
-a tbl data frame with columns MONTH and year
+a list of tbl dataframes which have columns MONTH and year
 }
 \description{
 Compute month and year information for given years
 }
 \note{
-"dplyr" package is required
+"dplyr" package is required.  If the argument "years" include a year
+where no data file exist, then the function returns NULL and a
+warning showing an invalid year
 }
 \examples{
 fars_read_years(c(2013, 2014))

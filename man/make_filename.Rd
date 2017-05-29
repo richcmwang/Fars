@@ -10,12 +10,12 @@ make_filename(year)
 \item{year}{an integer}
 }
 \value{
-a string for a file name
+a string representing a file name
 }
 \description{
 Create a file name for a given year
 }
 \examples{
-make_filename(2014) returns "accident_2014.csv.bz2"
+make_filename(2014)
 
 }

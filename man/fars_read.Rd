@@ -15,3 +15,7 @@ a data frame tbl containing the data in the file
 \description{
 Read in a file and return a tbl dataframe
 }
+\note{
+file has to be in the working directory.  If no file called filename exists in the working directory,
+then return an error
+}

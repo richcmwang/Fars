@@ -18,7 +18,7 @@ fars_read <- function(filename) {
 #'
 #' @param year an integer
 #' @return a string representing a file name
-#' @examples make_filename(2014) returns "accident_2014.csv.bz2"
+#' @examples make_filename(2014)
 #'
 make_filename <- function(year) {
         year <- as.integer(year)
@@ -65,7 +65,7 @@ fars_summarize_years <- function(years) {
 
 #' Draw accident locations on the map
 #'
-#' @param stat.num  a state number shown in the "state" column data
+#' @param state.num  a state number shown in the "state" column data
 #' @param year specify the year of data
 #' @return a map based on the Longitude and Latitude in the data
 #' @note "maps" package is required
