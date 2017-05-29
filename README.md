@@ -48,3 +48,5 @@ Fars::fars_map_state(51, 2013)
 ```
 
 ![](README-unnamed-chunk-3-1.png)
+
+Travis CI ![build passing](https://travis-ci.org/richcmwang/Fars.svg?branch=master)

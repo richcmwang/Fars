@@ -31,3 +31,5 @@ The following call on fars_map_state draw a map of state Colorado and plots loca
 library(maps)
 Fars::fars_map_state(51, 2013)
 ```
+
+Travis CI ![build passing](https://travis-ci.org/richcmwang/Fars.svg?branch=master)
