@@ -6,6 +6,9 @@
 #' then return an error
 #' @export
 fars_read <- function(filename) {
+        # changed filename by rw for testting package
+        filename <- file.path(system.file("extdata", package = "Fars"),
+                              filename)
         if(!file.exists(filename))
                 stop("file '", filename, "' does not exist")
         data <- suppressMessages({
