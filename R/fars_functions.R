@@ -5,7 +5,6 @@
 #' @note file has to be in the working directory.  If no file called filename exists in the working directory,
 #' then return an error
 #' @export
-
 fars_read <- function(filename) {
         if(!file.exists(filename))
                 stop("file '", filename, "' does not exist")
@@ -21,7 +20,6 @@ fars_read <- function(filename) {
 #' @return a string representing a file name
 #' @examples make_filename(2014)
 #' @export
-#'
 make_filename <- function(year) {
         year <- as.integer(year)
         sprintf("accident_%d.csv.bz2", year)

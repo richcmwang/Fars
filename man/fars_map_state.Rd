@@ -7,9 +7,9 @@
 fars_map_state(state.num, year)
 }
 \arguments{
-\item{year}{specify the year of data}
+\item{state.num}{a state number shown in the "state" column data}
 
-\item{stat.num}{a state number shown in the "state" column data}
+\item{year}{specify the year of data}
 }
 \value{
 a map based on the Longitude and Latitude in the data

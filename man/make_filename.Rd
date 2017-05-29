@@ -17,5 +17,4 @@ Create a file name for a given year
 }
 \examples{
 make_filename(2014)
-
 }
