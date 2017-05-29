@@ -3,7 +3,7 @@ Title: A practice for Coursera Course
 Version: 0.0.0.9000
 Authors@R: person("R", "Wang", role = c("aut", "cre"),
                      email = "richcmwang@gmail.com")
-Description: summarise the frequency of fatal accident events and plot accident locations
+Description: summarise the frequency of fatal accident events and plot accident locations.
 Depends: R (>= 3.3.2)
 License: GPL
 Encoding: UTF-8
@@ -11,5 +11,6 @@ LazyData: true
 RoxygenNote: 6.0.1
 Imports: dplyr,
     tidyr,
-    maps
+    maps,
+    readr
 Suggests: testthat
