@@ -4,6 +4,7 @@
 #' @return a data frame tbl containing the data in the file
 #' @note file has to be in the working directory.  If no file called filename exists in the working directory,
 #' then return an error
+#' @export
 
 fars_read <- function(filename) {
         if(!file.exists(filename))
@@ -19,6 +20,7 @@ fars_read <- function(filename) {
 #' @param year an integer
 #' @return a string representing a file name
 #' @examples make_filename(2014)
+#' @export
 #'
 make_filename <- function(year) {
         year <- as.integer(year)
@@ -33,6 +35,7 @@ make_filename <- function(year) {
 #' @note "dplyr" package is required.  If the argument "years" include a year
 #' where no data file exist, then the function returns NULL and a
 #' warning showing an invalid year
+#' @export
 fars_read_years <- function(years) {
         lapply(years, function(year) {
                 file <- make_filename(year)
@@ -55,6 +58,7 @@ fars_read_years <- function(years) {
 #' @note "dplyr" package is required.  If input years contains a year where no data exists,
 #' then the function will returns summary for valid years and a warning of invalid year.
 #' error and warning message are returned when the list of years contains no valid year.
+#' @export
 fars_summarize_years <- function(years) {
         dat_list <- fars_read_years(years)
         dplyr::bind_rows(dat_list) %>%
@@ -69,6 +73,7 @@ fars_summarize_years <- function(years) {
 #' @param year specify the year of data
 #' @return a map based on the Longitude and Latitude in the data
 #' @note "maps" package is required
+#' @export
 fars_map_state <- function(state.num, year) {
         filename <- make_filename(year)
         data <- fars_read(filename)
