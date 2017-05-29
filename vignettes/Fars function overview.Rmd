@@ -1,0 +1,33 @@
+---
+title: "Fars Functions"
+author: "Richad Wang"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+The functions provided will be using data from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System, which is a nationwide census providing the American public yearly data regarding fatal injuries suffered in motor vehicle traffic crashes.
+
+
+## Vignette Info
+
+Two major functions in this package.  `fars_summarize_years` returns a dataframe which summarise the number of accidents during given years.  `fars_map_state` draws a map of a given state number and plots locations of the accidents on given years.  The remaining functions   `make_filename`, `fars_read` and `fars_read_years` are helper functions for the two major functions. `make_filename` return the data file name of an input `year`. `fars_read` reads in data from an input datafile.  `fars_read_years` reads in data of a vector of `year` extract the month and year information and store them in a list. 
+
+
+## Examples
+
+The numbers of fatal accidents during 2014 is as follows:
+```{r}
+library(dplyr, quietly = TRUE)
+Fars::fars_summarize_years(2014)
+```
+
+The following call on fars_map_state draw a map of state Colorado and plots locations of fatal accidents.
+
+```{r}
+library(maps)
+Fars::fars_map_state(51, 2013)
+```

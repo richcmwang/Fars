@@ -13,4 +13,7 @@ Imports: dplyr,
     tidyr,
     maps,
     readr
-Suggests: testthat
+Suggests: testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
